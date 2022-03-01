@@ -1,0 +1,13 @@
+L.sort() #在这里卡了半天！中位数的定义首先是在一个大小顺序排列的序列中！
+if len(L)%2 == 0:
+    i=int(len(L)/2)
+    mid=(L[i]+L[i-1])/2
+    if (L[i]+L[i-1])%2 == 0:
+        print(int(mid))
+    else:
+        print('%.1f' %mid)
+
+else:
+    i=int((len(L)-1)/2)
+    mid=L[i]
+    print(mid)
