@@ -1,0 +1,20 @@
+list=[2]
+for n in range(3,101):
+    for i in range(2,n):
+        if (n%i) == 0:
+            break
+    else:
+        list.append(n)
+print(' '.join(str(x) for x in list))
+
+#another answer with less counts
+for i in range(2, 101):
+    flag = 0
+    for j in a:  #only count in prime number as divisor
+        if i % j == 0:
+            flag = 1
+            break
+    if flag == 0:
+        a.append(i)
+a = [str(ch) for ch in a]
+print(" ".join(a))
