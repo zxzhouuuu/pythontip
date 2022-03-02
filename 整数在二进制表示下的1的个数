@@ -1,0 +1,6 @@
+c=bin(a)
+n=0
+for i in c:
+    if i == '1':
+        n+=1
+print(n)
