@@ -6,7 +6,7 @@ for i in L:
 for j in l:
     m*=j
 flag=0
-while m%10==0:
+while m%10==0: #这里我曾因为使用for循环卡了半天，for用于迭代器，while用于条件判断
     flag+=1
     m/=10
 print(flag)
