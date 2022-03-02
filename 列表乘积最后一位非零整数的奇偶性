@@ -1,0 +1,11 @@
+m=1
+for i in L:
+    m*=i
+while m%10==0:
+    m//=10 #离谱的是这里我用m/=10居然通过不了，非得int
+else:
+    n=m%10
+    if n%2==0:
+        print(0)
+    else:
+        print(1)
