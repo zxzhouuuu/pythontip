@@ -1,0 +1,6 @@
+m=a*b
+n=max(a,b)
+for i in range(n,m+1):
+    if (i%a==0) and (i%b==0):
+        print(i)
+        break
