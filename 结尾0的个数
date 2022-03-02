@@ -1,0 +1,12 @@
+l=[]
+m=1
+for i in L:
+    if i%2==0 or i%5==0:
+        l.append(i) 
+for j in l:
+    m*=j
+flag=0
+while m%10==0:
+    flag+=1
+    m/=10
+print(flag)
