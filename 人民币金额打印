@@ -1,0 +1,46 @@
+def solve_it(a):
+    dic={0:'零',1:'壹',2:'贰',3:'叁',4:'肆',5:'伍',6:'陆',7:'柒',8:'捌',9:'玖'}
+    mag={0:'',1:'拾',2:'佰',3:'仟',4:'万',5:'拾',6:'佰',7:'仟'}
+    plu={0:'',1:'负'}
+    a=int(a)
+    A=''
+    n=0
+    p=0
+
+    if a<0:
+        p=1
+        a=-a
+
+    if a==0:
+        return(u"零圆")
+        #A=dic[a]
+
+    while a>0:
+        i=a%10
+        if i!=0:
+            A+=mag[n]+dic[i]
+        elif i==0 and n!=4:
+            A+=dic[i]
+        else:
+            A+=mag[n]
+        n+=1
+        a//=10
+
+    while A[:1] == '零':
+        A=A[1:]
+
+    A = list(A)
+    for j in range(len(A)):
+        #print(A[j])
+        if A[j] == '零' and A[j+1] == '零':
+            #A.replace(A[j],'')
+            A[j] = ""
+            #print(A)
+
+    A=''.join(reversed(A))
+    A=plu[p]+A+'圆'
+    A=A.replace("零万","万")
+    #A=A.encode('unicode_escape')
+    return(A) #your answer
+
+print(solve_it(a))  # 答案需要输出
