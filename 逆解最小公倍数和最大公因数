@@ -1,0 +1,16 @@
+from math import gcd
+C=[]
+D=[]
+plu=[]
+m,n=min(a,b),max(a,b)
+a,b=m,n
+for c in range(a,b+1):
+    if c%a==0 and b%c==0:
+        for d in range(c+1,b+1):
+            if d%a==0 and b%d==0 and c*d==a*b and gcd(c,d)==a:
+                C.append(c)
+                D.append(d)
+                plu.append((c+d))
+                break
+n=plu.index(min(plu))
+print(C[n],D[n])
